@@ -30,7 +30,6 @@
     .header-text h1 {
       margin: 0;
       font-size: 2rem;
-      line-height: 1.2;
     }
 
     .subline {
@@ -61,17 +60,24 @@
       margin-bottom: 14px;
     }
 
-    /* ===== BUTTON ===== */
+    /* ===== BUTTONS ===== */
     .btn {
       padding: 8px 16px;
       border-radius: 999px;
       cursor: pointer;
       font-size: 0.9rem;
       text-decoration: none;
-      display: inline-block;
       background: #2563eb;
       color: white;
       border: none;
+      margin-right: 8px;
+      display: inline-block;
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
     }
 
     /* ===== OVERVIEW ===== */
@@ -90,16 +96,12 @@
       margin-bottom: 20px;
     }
 
-    .overview-top h3 {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-
     .overview-intro {
       margin-top: 6px;
       font-size: 0.95rem;
       color: #4b5563;
-      max-width: 600px;
+      max-width: 650px;
+      line-height: 1.6;
     }
 
     .overview-grid {
@@ -113,51 +115,68 @@
       border-radius: 12px;
       padding: 14px 16px;
       border-left: 4px solid #2563eb;
-    }
-
-    .overview-block h4 {
-      margin: 0 0 6px;
-      font-size: 0.95rem;
-    }
-
-    .overview-block p {
-      margin: 0;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       line-height: 1.5;
-      color: #374151;
     }
 
     /* ===== Q&A ===== */
     .qa-item {
-      background: white;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 16px;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 22px;
       border: 1px solid #e5e7eb;
     }
 
     .qa-question {
       font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.5;
       white-space: pre-line;
+      margin-bottom: 12px;
+    }
+
+    .show-btn {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 6px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
     }
 
     .qa-answer {
       display: none;
-      margin-top: 12px;
-      padding: 12px;
-      background: #f8fafc;
-      border-left: 4px solid #22c55e;
+      margin-top: 14px;
+      padding: 18px;
+      background: #f9fafb;
+      border-left: 5px solid #22c55e;
+      border-radius: 8px;
       white-space: pre-line;
+      font-size: 0.9rem;
+      line-height: 1.7;
     }
 
-    .show-btn {
-      margin-top: 8px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      padding: 6px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-size: 0.85rem;
+    /* ===== Sub-answer indentation ===== */
+    .sub-part {
+      margin-left: 22px;
+      padding-left: 12px;
+      border-left: 3px solid #d1d5db;
+      margin-bottom: 14px;
+    }
+
+    .sub-part::before {
+      content: "↳ ";
+      color: #6b7280;
+      font-weight: bold;
+    }
+
+    /* ===== Keyword Highlight Mode ===== */
+    .highlight strong {
+      background: #fef08a;
+      padding: 2px 4px;
+      border-radius: 4px;
     }
 
     footer {
@@ -184,7 +203,7 @@
 
 <div class="container">
 
-  <!-- ===== OVERVIEW ===== -->
+  <!-- ===== OVERVIEW + PDF ===== -->
   <section>
     <h2>📘 Concept Overview</h2>
 
@@ -194,7 +213,9 @@
           <h3>Life Processes – What You Will Learn</h3>
           <p class="overview-intro">
             This chapter explains how living organisms carry out essential life functions
-            such as transportation, excretion, and co-ordination to survive and maintain balance.
+            such as transportation, excretion, and co-ordination to survive and maintain
+            balance (homeostasis). The concepts include plant and human systems,
+            nervous and endocrine coordination, and removal of waste products.
           </p>
         </div>
 
@@ -206,47 +227,11 @@
       </div>
 
       <div class="overview-grid">
-
-        <div class="overview-block">
-          <h4>I. Transportation in Living Organisms</h4>
-          <p>
-            Plants transport water through root pressure and transpiration pull.
-            Food prepared in leaves is transported by translocation, an energy-requiring process.
-          </p>
-        </div>
-
-        <div class="overview-block">
-          <h4>II. Excretion in Living Organisms</h4>
-          <p>
-            Harmful wastes are removed to maintain health.
-            Humans use kidneys and nephrons; plants excrete by diffusion or storage.
-          </p>
-        </div>
-
-        <div class="overview-block">
-          <h4>III. Co-ordination in Plants</h4>
-          <p>
-            Plants respond to stimuli through tropic movements and plant hormones
-            such as auxin and abscisic acid.
-          </p>
-        </div>
-
-        <div class="overview-block">
-          <h4>IV. Nervous System in Humans</h4>
-          <p>
-            Neurons transmit impulses through CNS, PNS, and ANS.
-            Reflex actions provide quick, involuntary responses.
-          </p>
-        </div>
-
-        <div class="overview-block">
-          <h4>V. Chemical Co-ordination</h4>
-          <p>
-            Endocrine glands release hormones that regulate growth,
-            metabolism, stress response, and reproduction.
-          </p>
-        </div>
-
+        <div class="overview-block"><strong>Transportation:</strong> Root pressure, transpiration pull, translocation of food.</div>
+        <div class="overview-block"><strong>Excretion:</strong> Human excretory system and waste removal in plants.</div>
+        <div class="overview-block"><strong>Plant Co-ordination:</strong> Tropic movements and plant hormones.</div>
+        <div class="overview-block"><strong>Nervous System:</strong> Neurons, CNS, reflex action.</div>
+        <div class="overview-block"><strong>Endocrine System:</strong> Hormones and chemical coordination.</div>
       </div>
     </div>
   </section>
@@ -254,11 +239,19 @@
   <!-- ===== TEXTBOOK EXERCISE ===== -->
   <section>
     <h2>✍️ Textbook Exercise</h2>
+
+    <p style="font-size:0.9rem;color:#4b5563;margin-bottom:10px;">
+      Try answering neatly in your notebook first.  
+      Use <strong>Show Answer</strong> to compare presentation and structure.
+    </p>
+
+    <button class="btn-outline" onclick="toggleHighlight()">🔍 Toggle Key Words (Revision Mode)</button>
+
     <div id="qa-container"></div>
   </section>
 
   <footer>
-    Life Processes · Interactive Learning Page
+    Life Processes · Structured Answer Practice
   </footer>
 
 </div>
@@ -361,7 +354,7 @@ b. How does excretion occur in human beings? Blood is filtered in the kidneys by
 c. How is excretion in plants useful to human beings? Many plant waste products are valuable materials for humans, such as rubber latex, gum, and resins.
 
 d. Describe the transportation system in plants: Plants use xylem to transport water and minerals upward from the roots, and phloem to transport food (sugar) from the leaves to other parts of the plant via translocation.`
-},
+}
 ];
 
 const container = document.getElementById("qa-container");
@@ -370,10 +363,19 @@ QA_DATA.forEach(item => {
   const div = document.createElement("div");
   div.className = "qa-item";
 
+  const parts = item.answer
+    .split(/\n(?=[a-d]\.)/)
+    .map(p => p.trim())
+    .filter(Boolean);
+
+  const formattedAnswer = parts.length > 1
+    ? parts.map(p => `<div class="sub-part">${p}</div>`).join("")
+    : `<div>${item.answer}</div>`;
+
   div.innerHTML = `
     <div class="qa-question">${item.question}</div>
     <button class="show-btn">Show Answer</button>
-    <div class="qa-answer">${item.answer}</div>
+    <div class="qa-answer">${formattedAnswer}</div>
   `;
 
   const btn = div.querySelector(".show-btn");
@@ -387,6 +389,12 @@ QA_DATA.forEach(item => {
 
   container.appendChild(div);
 });
+
+function toggleHighlight() {
+  document.querySelectorAll(".qa-answer").forEach(el => {
+    el.classList.toggle("highlight");
+  });
+}
 </script>
 
 </body>
