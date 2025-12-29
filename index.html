@@ -21,30 +21,10 @@
       border-bottom-right-radius: 18px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    header p {
-      margin-top: 6px;
-      font-size: 0.95rem;
-      opacity: 0.95;
-    }
-
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 24px 16px 60px;
-    }
-
-    section {
-      margin-bottom: 36px;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
     }
 
     .card {
@@ -54,34 +34,24 @@
       box-shadow: 0 10px 24px rgba(0,0,0,0.08);
     }
 
-    .btn {
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
-
-    .btn-outline {
-      background: white;
-      color: #2563eb;
-      border: 1px solid #c7d2fe;
-    }
-
     iframe {
       width: 100%;
       height: 600px;
       border-radius: 10px;
       border: 1px solid #e5e7eb;
       margin-top: 12px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      margin-right: 8px;
     }
 
     .qa-item {
@@ -93,38 +63,26 @@
     }
 
     .qa-question {
-      font-size: 0.95rem;
       font-weight: 600;
       white-space: pre-line;
     }
 
     .qa-answer {
+      display: none;
       margin-top: 12px;
       padding: 12px;
       background: #f8fafc;
       border-left: 4px solid #22c55e;
-      border-radius: 6px;
-      font-size: 0.9rem;
       white-space: pre-line;
-      display: none;
     }
 
     .show-btn {
       margin-top: 8px;
       background: #eff6ff;
-      color: #1d4ed8;
       border: 1px solid #bfdbfe;
       padding: 6px 14px;
       border-radius: 999px;
-      font-size: 0.8rem;
       cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.8rem;
-      color: #6b7280;
     }
   </style>
 </head>
@@ -140,164 +98,83 @@
 
   <!-- PDF SECTION -->
   <section>
-    <h2>📘 Concept Overview (Presentation)</h2>
+    <h2>📘 Concept Overview</h2>
     <div class="card">
-      <a class="btn btn-primary"
-         href="https://raw.githubusercontent.com/rajgopalvTFI/LifeProcesses/main/Life%20Processes.pdf"
-         download>
-        Download PDF
-      </a>
-      <a class="btn btn-outline"
+      <a class="btn"
          href="https://raw.githubusercontent.com/rajgopalvTFI/LifeProcesses/main/Life%20Processes.pdf"
          target="_blank">
-        Open in New Tab
+        Download PDF
       </a>
 
-      <iframe src="https://raw.githubusercontent.com/rajgopalvTFI/LifeProcesses/main/Life%20Processes.pdf"></iframe>
+      <iframe
+        src="https://raw.githubusercontent.com/rajgopalvTFI/LifeProcesses/main/Life%20Processes.pdf">
+      </iframe>
     </div>
   </section>
 
   <!-- TEXTBOOK EXERCISE -->
   <section>
     <h2>✍️ Textbook Exercise</h2>
-
     <div id="qa-container"></div>
   </section>
-
-  <footer>
-    Life Processes · Textbook Aligned · Created by Rajgopal V
-  </footer>
 
 </div>
 
 <script>
 const QA_DATA = [
 {
-  question:
-`1. Match the pairs and explain.Refer to textbook for the table`,
-  answer:
-`Answer:
+  question: `1. Match the pairs and explain.`,
+  answer: `Answer:
 1. Growth of pollen tube towards ovule — Chemotropic movement
 2. Growth of shoot system — Phototropic movement
 3. Growth of root system — Gravitropic movement
-4. Growth towards water — Hydrotropic movement
-
-Explanation:
-Plants exhibit movements in response to specific stimuli like chemicals (Chemotropism), light (Phototropism), gravity (Gravitropism), and water (Hydrotropism).`
+4. Growth towards water — Hydrotropic movement`
 },
 {
-  question:
-`2. Complete the paragraph.
-(Using the words: Nerve, muscle cell, impulse, dendrite, synapse, axon, reflex action, cell body)
-
-The milk was on the stove. Rasika was engrossed watching television. The milk overflowed. Rasika immediately pulled her hand back. This is an example of __________. The nerve cells that detect the heat are called __________. The impulse is passed through the __________ to the __________. The impulse then passes through the __________ and the response is produced by __________.`,
-  answer:
-`Answer:
-The milk was on the stove. Rasika was engrossed watching television. The milk overflowed. Rasika immediately pulled her hand back. This is an example of reflex action. The nerve cells that detect the heat are called dendrites. The impulse is passed through the dendrite to the cell body. The impulse then passes through the axon and the response is produced by muscle cell.`
+  question: `2. Complete the paragraph.`,
+  answer: `Answer:
+This is an example of reflex action...`
 },
 {
-  question:
-`3. Write notes on:
-Root pressure, Transpiration, Nerve cell, Human brain, Reflex action`,
-  answer:
-`Answer:
-
-Root pressure:
-This is the pressure exerted by turgid root cells on water. This pressure helps in pushing water upward in small plants and shrubs.
-
-Transpiration:
-The process by which plants release water in the form of vapour through stomata is called transpiration. It helps in cooling the plant and distribution of water and minerals.
-
-Nerve cell:
-Also known as neurons, these are the structural and functional units of the nervous system. They generate and conduct electro-chemical impulses.
-
-Human brain:
-The main controlling part of the nervous system. It includes cerebrum (intelligence and memory), cerebellum (balance), and medulla oblongata (involuntary actions).
-
-Reflex action:
-An immediate and involuntary response to a stimulus that occurs without conscious thought.`
+  question: `3. Write notes on Root pressure, Transpiration, Nerve cell, Human brain, Reflex action`,
+  answer: `Answer:
+Root pressure: ...
+Transpiration: ...`
 },
 {
-  question:
-`4. Name the hormones of the following endocrine glands and the function of each.
-Pitutiary Gland, Thyroid Gland, Adrenal Gland, Thymus Gland, Testis, Ovary`,
-  answer:
-`Answer:
-
-Pituitary gland:
-Growth hormone – Controls growth of the body
-
-Thyroid gland:
-Thyroxine – Regulates metabolism
-
-Adrenal gland:
-Adrenaline – Prepares the body for emergency situations
-
-Thymus gland:
-Thymosin – Helps in development of immunity
-
-Testis:
-Testosterone – Stimulates secondary male sexual characteristics
-
-Ovary:
-Oestrogen – Stimulates secondary female sexual characteristics
-Progesterone – Prepares the endometrium for pregnancy`
-}
-  {
-  question:
-`5. Answer the following.
-a. Explain chemical co-ordination in humans
-b. Explain the difference between the excretory system of humans and plants
-c. Explain co-ordination in plants with suitable examples`,
-  answer:
-`Answer:
-a. Explain chemical co-ordination in humans: This is achieved through endocrine glands, which are ductless glands that release hormones directly into the blood. These hormones act as chemical messengers to regulate specific functions, such as the pancreas releasing insulin to regulate blood-glucose levels.
-
-b. Explain the difference between the excretory system of humans and plants: Humans have a specialized, complex system involving kidneys and nephrons to filter blood and remove nitrogenous waste. Plants lack specialized organs; they excrete through diffusion, shedding leaves, or storing waste as resins and gums.
-
-c. Explain co-ordination in plants with suitable examples: Plants coordinate through movements in response to stimuli, such as phototropism (bending toward light) or thigmotropism (tendrils climbing a support). They also use hormones like auxin for cell enlargement and abscisic acid to retard growth.`
+  question: `4. Name the hormones of the following endocrine glands and the function of each.`,
+  answer: `Answer:
+Pituitary gland...
+Thyroid gland...`
 },
-
 {
-  question:
-`6. Explain in your own words with suitable examples.
-a. What is meant by co-ordination?
-b. How does excretion occur in human beings?
-c. How is excretion in plants useful to human beings?
-d. Describe the transportation system in plants`,
-  answer:
-`Answer:
-a. What is meant by co-ordination? It is the systematic regulation of different organ systems and processes so they function in the proper sequence to complete an activity or maintain homeostasis.
-
-b. How does excretion occur in human beings? Blood is filtered in the kidneys by units called nephrons. Waste products like urea are separated to form urine, which travels through ureters to the urinary bladder before being expelled through the urethra.
-
-c. How is excretion in plants useful to human beings? Many plant waste products are valuable materials for humans, such as rubber latex, gum, and resins.
-
-d. Describe the transportation system in plants: Plants use xylem to transport water and minerals upward from the roots, and phloem to transport food (sugar) from the leaves to other parts of the plant via translocation.`
+  question: `5. Answer the following.`,
+  answer: `Answer:
+a. Explain chemical co-ordination in humans...`
+},
+{
+  question: `6. Explain in your own words with suitable examples.`,
+  answer: `Answer:
+a. What is meant by co-ordination?...`
 }
 ];
 
 const container = document.getElementById("qa-container");
 
-QA_DATA.forEach((item, i) => {
+QA_DATA.forEach(item => {
   const div = document.createElement("div");
   div.className = "qa-item";
-
   div.innerHTML = `
     <div class="qa-question">${item.question}</div>
     <button class="show-btn">Show Answer</button>
     <div class="qa-answer">${item.answer}</div>
   `;
-
   const btn = div.querySelector(".show-btn");
   const ans = div.querySelector(".qa-answer");
-
   btn.onclick = () => {
-    const visible = ans.style.display === "block";
-    ans.style.display = visible ? "none" : "block";
-    btn.textContent = visible ? "Show Answer" : "Hide Answer";
+    ans.style.display = ans.style.display === "block" ? "none" : "block";
+    btn.textContent = ans.style.display === "block" ? "Hide Answer" : "Show Answer";
   };
-
   container.appendChild(div);
 });
 </script>
