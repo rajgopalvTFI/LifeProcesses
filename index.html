@@ -13,47 +13,55 @@
       color: #1f2937;
     }
 
-    header {
-      background: linear-gradient(135deg, #2563eb, #1e40af);
-      color: white;
-      padding: 24px 20px;
-      border-bottom-left-radius: 18px;
-      border-bottom-right-radius: 18px;
+    /* ===== HEADER ===== */
+    .main-header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #ffffff;
+      padding: 36px 20px 40px;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
     }
 
-    header h1 {
+    .header-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .header-text h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      line-height: 1.2;
     }
 
-    header p {
-      margin: 6px 0 0;
-      font-size: 0.95rem;
+    .subline {
+      margin-top: 8px;
+      font-size: 1rem;
       opacity: 0.95;
     }
 
+    .credit {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* ===== LAYOUT ===== */
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 24px 16px 60px;
+      padding: 28px 16px 60px;
     }
 
     section {
-      margin-bottom: 36px;
+      margin-bottom: 40px;
     }
 
     h2 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
     }
 
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-    }
-
+    /* ===== BUTTON ===== */
     .btn {
       padding: 8px 16px;
       border-radius: 999px;
@@ -63,16 +71,63 @@
       display: inline-block;
       background: #2563eb;
       color: white;
-      margin-bottom: 12px;
+      border: none;
     }
 
-    .summary {
+    /* ===== OVERVIEW ===== */
+    .overview-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .overview-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .overview-top h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .overview-intro {
+      margin-top: 6px;
       font-size: 0.95rem;
-      line-height: 1.6;
-      color: #374151;
-      white-space: pre-line;
+      color: #4b5563;
+      max-width: 600px;
     }
 
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .overview-block {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 14px 16px;
+      border-left: 4px solid #2563eb;
+    }
+
+    .overview-block h4 {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+    }
+
+    .overview-block p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #374151;
+    }
+
+    /* ===== Q&A ===== */
     .qa-item {
       background: white;
       border-radius: 12px;
@@ -102,6 +157,7 @@
       padding: 6px 14px;
       border-radius: 999px;
       cursor: pointer;
+      font-size: 0.85rem;
     }
 
     footer {
@@ -115,54 +171,87 @@
 
 <body>
 
-<header>
-  <h1>Life Processes of Living Organisms</h1>
-  <p>Created by Rajgopal V · For Grade 9, VarshaNagar MPS</p>
+<!-- ===== HEADER ===== -->
+<header class="main-header">
+  <div class="header-content">
+    <div class="header-text">
+      <h1>Life Processes of Living Organisms</h1>
+      <p class="subline">Biology · Grade 9 · VarshaNagar MPS</p>
+      <p class="credit">Created by Rajgopal V</p>
+    </div>
+  </div>
 </header>
 
 <div class="container">
 
-  <!-- CONCEPT SECTION -->
+  <!-- ===== OVERVIEW ===== -->
   <section>
     <h2>📘 Concept Overview</h2>
-    <div class="card">
-      <a class="btn"
-         href="https://raw.githubusercontent.com/iamvrajgopal/LifeProcesses/main/Life%20Processes.pdf"
-         target="_blank">
-        Download Presentation (PDF)
-      </a>
 
-      <div class="summary">
-I. Transportation in Living Organisms  
-• Transportation in Plants: Unlike animals, plants require less energy but need a system to move inorganic substances absorbed from the soil.  
-  ◦ Water Transport: Occurs through root pressure and transpiration pull.  
-  ◦ Food Transport: The movement of food (sucrose) from leaves to other plant parts is called translocation and requires ATP.
+    <div class="overview-card">
+      <div class="overview-top">
+        <div>
+          <h3>Life Processes – What You Will Learn</h3>
+          <p class="overview-intro">
+            This chapter explains how living organisms carry out essential life functions
+            such as transportation, excretion, and co-ordination to survive and maintain balance.
+          </p>
+        </div>
 
-II. Excretion in Living Organisms  
-• Living organisms produce harmful waste like urea, ammonia, and uric acid that must be removed.  
-• Plants excrete through diffusion, shedding leaves/fruits, or storing waste as resins and gums.  
-• Human excretory system consists of kidneys, ureters, urinary bladder, and urethra. Nephrons filter blood to form urine.  
-• Dialysis is used when kidneys fail.
+        <a class="btn"
+           href="https://raw.githubusercontent.com/iamvrajgopal/LifeProcesses/main/Life%20Processes.pdf"
+           target="_blank">
+          Download Presentation (PDF)
+        </a>
+      </div>
 
-III. Co-ordination in Plants  
-• Co-ordination is the regulation of organ systems to maintain homeostasis.  
-• Growth-related movements (tropisms) include phototropism, gravitropism, hydrotropism, and chemotropism.  
-• Growth-irrelevant movements include immediate responses like closing of Touch-me-not leaves.  
-• Plant hormones like auxin, gibberellins, and abscisic acid regulate growth.
+      <div class="overview-grid">
 
-IV. Co-ordination in Humans – Nervous System  
-• Neuron is the structural and functional unit of the nervous system.  
-• Nervous system includes CNS, PNS, and ANS.  
-• Reflex action is an immediate involuntary response to a stimulus.
+        <div class="overview-block">
+          <h4>I. Transportation in Living Organisms</h4>
+          <p>
+            Plants transport water through root pressure and transpiration pull.
+            Food prepared in leaves is transported by translocation, an energy-requiring process.
+          </p>
+        </div>
 
-V. Chemical Co-ordination – Endocrine System  
-• Endocrine glands release hormones directly into the blood.  
-• Major glands include pituitary, thyroid, pancreas, adrenal, ovary, and testis.
+        <div class="overview-block">
+          <h4>II. Excretion in Living Organisms</h4>
+          <p>
+            Harmful wastes are removed to maintain health.
+            Humans use kidneys and nephrons; plants excrete by diffusion or storage.
+          </p>
+        </div>
+
+        <div class="overview-block">
+          <h4>III. Co-ordination in Plants</h4>
+          <p>
+            Plants respond to stimuli through tropic movements and plant hormones
+            such as auxin and abscisic acid.
+          </p>
+        </div>
+
+        <div class="overview-block">
+          <h4>IV. Nervous System in Humans</h4>
+          <p>
+            Neurons transmit impulses through CNS, PNS, and ANS.
+            Reflex actions provide quick, involuntary responses.
+          </p>
+        </div>
+
+        <div class="overview-block">
+          <h4>V. Chemical Co-ordination</h4>
+          <p>
+            Endocrine glands release hormones that regulate growth,
+            metabolism, stress response, and reproduction.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- TEXTBOOK EXERCISE -->
+  <!-- ===== TEXTBOOK EXERCISE ===== -->
   <section>
     <h2>✍️ Textbook Exercise</h2>
     <div id="qa-container"></div>
@@ -178,30 +267,7 @@ V. Chemical Co-ordination – Endocrine System
 const QA_DATA = [
 {
   question:
-`1. Match the pairs and explain.
-
-‘A’
-
-‘B’
-
-1. Growth towards pollen tube of ovule
-
-Gravitropic movement
-
-2. Growth of shoot system
-
-Chemotropic movement
-
-3. Growth of root system
-
-Phototropic movement
-
-4. Growth towards water
-
-Growth-irrelevant movement
-
-
-Hydrotropic movement`,
+`1. Match the pairs and explain. Refer to the textbook for the table.`,
   answer:
 `Answer:
 
@@ -279,7 +345,7 @@ c. Explain co-ordination in plants with suitable examples: Plants coordinate thr
 },
 {
   question:
-`6. Explain in your own words with suitable examples.
+`7. Explain in your own words with suitable examples.
 
 a. What is meant by co-ordination?
 b. How does excretion occur in human beings?
@@ -304,24 +370,27 @@ d. Describe the transportation system in plants: Plants use xylem to transport w
 }
 ];
 
-
 const container = document.getElementById("qa-container");
 
 QA_DATA.forEach(item => {
   const div = document.createElement("div");
   div.className = "qa-item";
+
   div.innerHTML = `
     <div class="qa-question">${item.question}</div>
     <button class="show-btn">Show Answer</button>
     <div class="qa-answer">${item.answer}</div>
   `;
+
   const btn = div.querySelector(".show-btn");
   const ans = div.querySelector(".qa-answer");
+
   btn.onclick = () => {
     const open = ans.style.display === "block";
     ans.style.display = open ? "none" : "block";
     btn.textContent = open ? "Show Answer" : "Hide Answer";
   };
+
   container.appendChild(div);
 });
 </script>
